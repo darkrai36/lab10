@@ -1,19 +1,8 @@
-import java.util.List;
-
 public class Institute {
 
 	private String name;
 	private String address;
-	private List<ResearchAssociate> researchAssociates;
-
-	/**
-	 * 
-	 * @param associate
-	 */
-	public void addResearchAssociate(ResearchAssociate associate) {
-		// TODO - implement Institute.addResearchAssociate
-		throw new UnsupportedOperationException();
-	}
+	private ResearchAssociate researchAssociates;
 
 	public String getName() {
 		return this.name;
@@ -37,6 +26,15 @@ public class Institute {
 	 */
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	/**
+	 * 
+	 * @param associate
+	 */
+	public void addResearchAssociate(ResearchAssociate associate) {
+		// TODO - implement Institute.addResearchAssociate
+		throw new UnsupportedOperationException();
 	}
 
 }

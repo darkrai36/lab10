@@ -3,7 +3,7 @@ import java.util.List;
 public class ResearchAssociate extends Employee {
 
 	private String fieldOfStudy;
-	private List<Project> projects;
+	private Project projects;
 	private List<Participation> participations;
 
 	public String getFieldOfStudy() {
@@ -18,7 +18,7 @@ public class ResearchAssociate extends Employee {
 		this.fieldOfStudy = fieldOfStudy;
 	}
 
-	public List<Project> getProjects() {
+	public Project getProjects() {
 		return this.projects;
 	}
 
@@ -26,7 +26,7 @@ public class ResearchAssociate extends Employee {
 	 * 
 	 * @param projects
 	 */
-	public void setProjects(List<Project> projects) {
+	public void setProjects(Project projects) {
 		this.projects = projects;
 	}
 
@@ -40,11 +40,6 @@ public class ResearchAssociate extends Employee {
 	 */
 	public void setParticipations(List<Participation> participations) {
 		this.participations = participations;
-	}
-
-	public String publishResearch() {
-		// TODO - implement ResearchAssociate.publishResearch
-		throw new UnsupportedOperationException();
 	}
 
 	/**

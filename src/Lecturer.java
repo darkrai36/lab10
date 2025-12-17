@@ -1,10 +1,8 @@
-import java.util.List;
-
 public class Lecturer extends ResearchAssociate {
 
-	private List<Course> taughtCourses;
+	private Course taughtCourses;
 
-	public List<Course> getTaughtCourses() {
+	public Course getTaughtCourses() {
 		return this.taughtCourses;
 	}
 
@@ -12,7 +10,7 @@ public class Lecturer extends ResearchAssociate {
 	 * 
 	 * @param taughtCourses
 	 */
-	public void setTaughtCourses(List<Course> taughtCourses) {
+	public void setTaughtCourses(Course taughtCourses) {
 		this.taughtCourses = taughtCourses;
 	}
 
