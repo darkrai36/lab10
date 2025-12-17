@@ -1,4 +1,5 @@
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
@@ -7,6 +8,13 @@ public class Project {
 	private Date start;
 	private Date end;
 	private List<Participation> participations;
+
+	public Project(String name, Date start, Date end, List<Participation> participations) {
+		this.name = name;
+		this.start = start;
+		this.end = end;
+		this.participations = new ArrayList<>();
+	}
 
 	public String getName() {
 		return this.name;
@@ -66,8 +74,12 @@ public class Project {
 	 * @param participation
 	 */
 	public void addParticipation(Participation participation) {
-		// TODO - implement Project.addParticipation
-		throw new UnsupportedOperationException();
+		this.participations.add(participation);
+		System.out.println("Participation added successfully!");
 	}
 
+	@Override
+	public String toString() {
+		return "Project name: " + this.name + ". It starts on " + this.start.toString() + ". It ends on " + this.end.toString();
+	}
 }

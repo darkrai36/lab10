@@ -1,8 +1,15 @@
+import java.util.List;
+
 public class Institute {
 
 	private String name;
 	private String address;
-	private ResearchAssociate researchAssociates;
+	private List<ResearchAssociate> researchAssociates;
+
+	public Institute(String name, String address) {
+		this.name = name;
+		this.address = address;
+	}
 
 	public String getName() {
 		return this.name;
@@ -33,8 +40,12 @@ public class Institute {
 	 * @param associate
 	 */
 	public void addResearchAssociate(ResearchAssociate associate) {
-		// TODO - implement Institute.addResearchAssociate
-		throw new UnsupportedOperationException();
+		this.researchAssociates.add(associate);
+		System.out.println("Research Associate " + associate.getName() + " добавлен.");
 	}
 
+	@Override
+	public String toString() {
+		return "Our institute name - " + this.name + ". Its address - " + this.address;
+	}
 }

@@ -4,6 +4,12 @@ public class Participation {
 	private ResearchAssociate researchAssociate;
 	private Project project;
 
+	public Participation(int hours, ResearchAssociate researchAssociate, Project project) {
+		this.hours = hours;
+		this.researchAssociate = researchAssociate;
+		this.project = project;
+	}
+
 	public int getHours() {
 		return this.hours;
 	}
@@ -40,4 +46,12 @@ public class Participation {
 		this.project = project;
 	}
 
+	@Override
+	public String toString() {
+		return "Participation{" +
+				"hours=" + hours +
+				", researchAssociate=" + researchAssociate +
+				", project=" + project +
+				'}';
+	}
 }

@@ -5,7 +5,15 @@ public class Employee {
 	private String email;
 	private double salary;
 	private String position;
-	private int counter;
+	private static int counter = 1;
+
+	public Employee(int id, String name, String email, double salary, String position) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.salary = salary;
+		this.position = position;
+	}
 
 	public int getId() {
 		return this.id;
@@ -67,21 +75,18 @@ public class Employee {
 		this.position = position;
 	}
 
-	public int getCounter() {
-		return this.counter;
-	}
-
-	/**
-	 * 
-	 * @param counter
-	 */
-	public void setCounter(int counter) {
-		this.counter = counter;
-	}
+	public int getCounter() {return counter;}
 
 	public void increaseCount() {
-		// TODO - implement Employee.increaseCount
-		throw new UnsupportedOperationException();
+		counter++;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", email='" + email + '\'' +
+				'}';
+	}
 }

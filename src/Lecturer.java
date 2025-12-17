@@ -1,22 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Lecturer extends ResearchAssociate {
 
-	private Course taughtCourses;
+	private List<Course> taughtCourses;
 
-	public Course getTaughtCourses() {
+	public Lecturer(int id, String name, String email, double salary, String position, List<Course> taughtCourses) {
+		super(id, name, email, salary, position);
+		this.taughtCourses = new ArrayList<>();
+	}
+
+	public List<Course> getTaughtCourses() {
 		return this.taughtCourses;
 	}
+
 
 	/**
 	 * 
 	 * @param taughtCourses
 	 */
-	public void setTaughtCourses(Course taughtCourses) {
+	public void setTaughtCourses(List<Course> taughtCourses) {
 		this.taughtCourses = taughtCourses;
 	}
 
-	public void teachCourse() {
-		// TODO - implement Lecturer.teachCourse
-		throw new UnsupportedOperationException();
+	public void teachCourse(Course course) {
+		System.out.println("Lecturer " + this.getName() + " teaches course '" + course.getName() + "'.");
 	}
 
 	/**
@@ -24,8 +32,11 @@ public class Lecturer extends ResearchAssociate {
 	 * @param course
 	 */
 	public void addCourse(Course course) {
-		// TODO - implement Lecturer.addCourse
-		throw new UnsupportedOperationException();
+		this.taughtCourses.add(course);
 	}
 
+	@Override
+	public String toString() {
+		return "Our lecturer - " + this.getName() + ". His e-mail: " + this.getEmail();
+	}
 }

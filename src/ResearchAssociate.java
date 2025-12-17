@@ -6,6 +6,10 @@ public class ResearchAssociate extends Employee {
 	private Project projects;
 	private List<Participation> participations;
 
+	public ResearchAssociate(int id, String name, String email, double salary, String position) {
+		super(id, name, email, salary, position);
+	}
+
 	public String getFieldOfStudy() {
 		return this.fieldOfStudy;
 	}
@@ -47,8 +51,7 @@ public class ResearchAssociate extends Employee {
 	 * @param participation
 	 */
 	public void addParticipation(Participation participation) {
-		// TODO - implement ResearchAssociate.addParticipation
-		throw new UnsupportedOperationException();
+		System.out.println("Participation " + participation.toString() + " added successfully.");
 	}
 
 }
